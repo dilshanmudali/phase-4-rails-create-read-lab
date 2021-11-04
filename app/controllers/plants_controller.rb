@@ -7,7 +7,7 @@ class PlantsController < ApplicationController
     end
 
     def show 
-        plant = Plant.find_by(id:params[:id])
+        plant = Plant.find(params[:id])
         if plant
             render json: plant, status: :ok
         else
